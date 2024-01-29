@@ -1,0 +1,36 @@
+DROP DATABASE IF EXISTS `agendacontacto`;
+CREATE DATABASE `agendacontacto`;
+USE `agendacontacto`;
+
+DROP TABLE IF EXISTS `contacto`;
+CREATE TABLE contacto(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(255) NOT NULL,
+apelido VARCHAR(255) NOT NULL,
+telefone1 VARCHAR(255) NOT NULL,
+telefone2 VARCHAR(255) NOT NULL,
+endereco1 VARCHAR(255) NOT NULL,
+endereco2 VARCHAR(255) NOT NULL,
+email VARCHAR(255) NOT NULL,
+categoria VARCHAR (255) NOT NULL,
+genero VARCHAR(255) NOT NULL,
+data_nascimento VARCHAR(255) NOT NULL,
+foto LONGBLOB NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE usuario(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(255) NOT NULL,
+senha VARCHAR(255) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+SHOW TABLES;
+SELECT * FROM contacto;
+INSERT INTO usuario VALUES (null, "admin","1234");
+INSERT INTO usuario VALUES (null, "eugenio.nossi","1234");
+SELECT * FROM usuario;
+
+
+
+
